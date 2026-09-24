@@ -1,0 +1,132 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  color: #222;
+  line-height: 1.5;
+}
+
+h1 {
+  font-size: 22px;
+}
+
+a {
+  color: #0645ad;
+}
+
+button,
+select,
+input {
+  font: inherit;
+}
+
+button {
+  padding: 7px 14px;
+  cursor: pointer;
+}
+
+.box {
+  width: min(400px, 100%);
+  margin: 80px auto;
+}
+
+.box input {
+  width: 100%;
+  max-width: 250px;
+  padding: 7px;
+}
+
+.error {
+  color: #b00;
+}
+
+/* Top navigation / user information */
+.top {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  margin-bottom: 20px;
+}
+
+/* Station selector */
+select {
+  padding: 7px;
+  min-width: 150px;
+  margin-inline-end: 6px;
+}
+
+/* Sales table */
+.sales-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  margin-top: 16px;
+}
+
+table.sales {
+  width: 100%;
+  min-width: 650px;
+  border-collapse: collapse;
+}
+
+table.sales th,
+table.sales td {
+  border: 1px solid #ccc;
+  padding: 8px 12px;
+  text-align: right;
+}
+
+table.sales th {
+  background: #f2f2f2;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  body {
+    margin: 12px;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  .top {
+    flex-wrap: wrap;
+    margin-bottom: 16px;
+  }
+
+  form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    align-items: center;
+  }
+
+  select {
+    width: 100%;
+    margin-inline-end: 0;
+  }
+
+  form button {
+    width: 100%;
+  }
+
+  .sales-wrapper {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  table.sales {
+    min-width: 600px;
+  }
+
+  table.sales th,
+  table.sales td {
+    padding: 7px 8px;
+    font-size: 14px;
+  }
+}
